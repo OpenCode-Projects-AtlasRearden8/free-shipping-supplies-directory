@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-02",
+  "project": "Free Shipping Supplies Directory - freebie sources for resellers",
+  "categories": [
+    { "key": "usps", "label": "USPS programs" },
+    { "key": "couriers", "label": "Courier programs" },
+    { "key": "stores", "label": "Store give-aways" },
+    { "key": "frugal", "label": "Frugal alternatives" }
+  ],
+  "suppliers": [
+    {
+      "id": "usps-free-supplies",
+      "name": "USPS free branded boxes + envelopes",
+      "category": "usps",
+      "cost_type": "free-with-service",
+      "cost": "Free packaging; must ship Priority Mail / Priority Mail Express",
+      "gist": "Brand-new, service-branded boxes, flat-rate and padded envelopes, paks and pouches - shipped to your door free, or picked up at any Post Office counter.",
+      "details": [
+        "Order from the Postal Store's 'Free Shipping Supplies' listing: singles, or packs of 10 and 25, shipped to you at no cost.",
+        "47 free products were listed in USPS's free-supplies filter as observed on 2026-11-02 - all Priority Mail or Priority Mail Express branded.",
+        "Key rule per USPS's own store text: 'Priority Mail Flat Rate shipping supplies may only be used to ship via Priority Mail Flat Rate' - service-branded supplies go with the matching service.",
+        "You pay postage as usual; the packaging itself is $0. Orders of 1-5 flat-rate items can be fulfilled by your local Post Office; bigger batches ship from distribution centers."
+      ],
+      "url": "https://store.usps.com/store/results/free-shipping-supplies/shipping-supplies/_/N-alnx4jZ7d0v8v",
+      "url_label": "USPS Postal Store - Free Shipping Supplies",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Free Shipping Supplies filter showed 47 items (Priority Mail 47, Priority Mail Express 11)", "observed": "2026-11-02", "source": "store.usps.com results page (bot-shielded to curl, content read via search snapshot)" },
+        { "claim": "Supplies shipped to you at no cost; packs of 10/25; 'may only be used to ship via Priority Mail Flat Rate'", "observed": "2026-11-02", "source": "USPS store product page text (P_EP_14_F) in search snapshot" }
+      ]
+    },
+    {
+      "id": "usps-flat-rate",
+      "name": "USPS Flat Rate strategy (+ observed prices)",
+      "category": "usps",
+      "cost_type": "free-with-service",
+      "cost": "Free packaging; flat postage per type (prices observed)",
+      "gist": "Free flat-rate packaging with one fixed price regardless of weight (up to 70 lb) or distance - a winner for dense, heavy items shipping far.",
+      "details": [
+        "Observed USPS-listed commercial prices on 2026-11-02: Flat Rate envelope $11.97; Legal envelope $12.51; Small Flat Rate box $12.95; Medium boxes $22.02 (retail $25.80); Large box $32.75 (retail $36.10); APO/FPO box $31.34.",
+        "Retail window pricing is higher - book postage online (Click-N-Ship or any discount platform) for commercial rates.",
+        "Flat Rate shines for heavy-to-far-zone lanes (book lots, tools, cast iron). It usually LOSES for light parcels vs. Ground Advantage tiers.",
+        "The Padded Flat Rate Envelope is the sleeper pick: clothing resellers can fill it generously and still pay the envelope price."
+      ],
+      "url": "https://www.usps.com/ship/priority-mail.htm",
+      "url_label": "USPS Priority Mail (rate table)",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "FR envelope $11.97, legal $12.51, small box $12.95, medium $22.02/$25.80 retail, large $32.75/$36.10 retail, APO $31.34", "observed": "2026-11-02", "source": "usps.com/ship/priority-mail.htm rate table" },
+        { "claim": "Domestic rates are published in Notice 123 USPS guide; recheck after each USPS January price change", "observed": "2026-11-02", "source": "pe.usps.com/text/dmm300/Notice123.htm" }
+      ]
+    },
+    {
+      "id": "usps-supply-rules",
+      "name": "USPS supply rules (reuse + misuse)",
+      "category": "usps",
+      "cost_type": "free-with-service",
+      "cost": "Free to follow - mistakes get expensive",
+      "gist": "90 seconds of fine print that keeps you out of trouble: branded supplies ship the matching service, old labels die, and misuse is federal-law territory per USPS.",
+      "details": [
+        "DMM 115 wording (Priority Mail Express): USPS-provided packaging 'must be used only for Priority Mail Express' - the same style of rule applies to Priority Mail packaging under DMM 135.",
+        "USPS's own FAQ on using and reusing boxes adds: 'Misuse may be a violation of federal law.'",
+        "Reusing USPS-branded boxes: allowed only for the matching service, and old labels/barcodes must be fully removed or blacked out.",
+        "Never put Priority-branded packaging under FedEx, UPS, or Ground Advantage postage; never resell or give supplies away as materials."
+      ],
+      "url": "https://faq.usps.com/s/article/How-do-I-Use-or-Reuse-Boxes-Properly",
+      "url_label": "USPS FAQ - Use or reuse boxes properly",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "'Misuse may be a violation of federal law' plus reuse guidance", "observed": "2026-11-02", "source": "faq.usps.com article (HTTP 200)" },
+        { "claim": "DMM 115.1.1: USPS-provided Priority Mail Express packaging used only for Priority Mail Express", "observed": "2026-11-02", "source": "pe.usps.com DMM 115 PDF (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "usps-ground-advantage",
+      "name": "USPS Ground Advantage - bring your own box",
+      "category": "usps",
+      "cost_type": "free-with-service",
+      "cost": "No free supplies; cheapest USPS lane for light parcels",
+      "gist": "The workhorse for 1-16 oz reseller parcels: weight-tier pricing, any sturdy box or mailer allowed, and no free branded supplies - pair it with the store give-aways and frugal picks below.",
+      "details": [
+        "Observed 2026-11-02 on usps.com: Ground Advantage starts at $7.90 at the Post Office / $6.93 with commercial rates for the lightest tier.",
+        "Weight tiers step at 4 oz, 8 oz, 12 oz, and 15.999 oz - trimming cushioning (and using lighter mailers) can keep you in a cheaper tier.",
+        "Any plain, service-neutral box or poly/bubble mailer is acceptable; old labels must be removed or crossed out."
+      ],
+      "url": "https://www.usps.com/ship/ground-advantage.htm",
+      "url_label": "USPS Ground Advantage",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Prices start at $7.90 at a Post Office / lower commercial rates; weight tiers 4/8/12/15.999 oz", "observed": "2026-11-02", "source": "usps.com Ground Advantage and business prices pages" }
+      ]
+    },
+    {
+      "id": "usps-locator-pickup",
+      "name": "Post Office counters + free carrier pickup",
+      "category": "usps",
+      "cost_type": "free",
+      "cost": "Free",
+      "gist": "Supplies today? Ask the clerk. Parcels tomorrow? Your own carrier picks up prepaid boxes at your door - zero driving, zero spending.",
+      "details": [
+        "Post Offices hand over Priority Mail sleeves, envelopes and boxes when you are shipping the matching service that day - ask politely; inventory varies by office.",
+        "USPS store text: local Post Offices can fulfill orders of 1-5 flat-rate supply items; larger orders ship from distribution centers.",
+        "Free Package Pickup: leave prepaid parcels for your regular carrier. USPS even ships your supplies order with a 'Carrier - Leave if No Response' endorsement."
+      ],
+      "url": "https://tools.usps.com/find-location.htm",
+      "url_label": "USPS location finder",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Local PO fulfills 1-5 flat-rate supply orders; supplies ship with 'Carrier - Leave if No Response' endorsement", "observed": "2026-11-02", "source": "store.usps.com product page text in search snapshot" }
+      ]
+    },
+    {
+      "id": "fedex-one-rate",
+      "name": "FedEx One Rate (free flat packaging)",
+      "category": "couriers",
+      "cost_type": "free-with-service",
+      "cost": "Free packaging; flat rate per box/pak (prices vary by service)",
+      "gist": "FedEx's flat-rate program: pick eligible One Rate boxes or envelopes, they arrive free with your account, and the price is fixed by size.",
+      "details": [
+        "One Rate requires its eligible packaging; grab it free online with a FedEx account or at a FedEx Office counter.",
+        "Observed 2026-11-02 on fedex.com: the FedEx 2Day flat rate for the One Rate envelope was $12.75 (other sizes and services differ).",
+        "If your item exceeds the packaging's size limits, FedEx re-rates it as a standard parcel - measure before you commit."
+      ],
+      "url": "https://www.fedex.com/en-us/shipping/one-rate.html",
+      "url_label": "FedEx One Rate",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "FedEx 2Day flat rate: One Rate envelope $12.75; extras like Saturday delivery are additional fees", "observed": "2026-11-02", "source": "fedex.com One Rate page (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "fedex-free-packaging",
+      "name": "FedEx free expedited packaging",
+      "category": "couriers",
+      "cost_type": "free-with-service",
+      "cost": "Free with FedEx expedited / Express Saver / International Economy",
+      "gist": "FedEx says it plainly: shipping expedited? Envelopes, paks, poly bags, boxes and tubes are complimentary - order online and they ship them to you for free.",
+      "details": [
+        "Per fedex.com: 'Complimentary FedEx packaging is only available for shipments using FedEx expedited, FedEx Express Saver or FedEx International Economy services.'",
+        "Free at FedEx Office and Ship Centers when you ship the same day; otherwise order with the free account.",
+        "FedEx Ground lanes (Ground, Ground Saver) want your own packaging - the freebies are the expedited family."
+      ],
+      "url": "https://www.fedex.com/en-us/shipping/packing/supplies/boxes.html",
+      "url_label": "FedEx boxes / free packaging page",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Complimentary packaging scope (expedited, Express Saver, International Economy); free delivery of online orders", "observed": "2026-11-02", "source": "fedex.com boxes page (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "ups-free-supplies",
+      "name": "UPS account supplies (order free online)",
+      "category": "couriers",
+      "cost_type": "free-with-service",
+      "cost": "Free for account holders; supplies mainly fit express lanes",
+      "gist": "A free UPS profile opens their supplies ordering page: free UPS-branded boxes, envelopes and forms shipped to you in a few business days.",
+      "details": [
+        "Per ups.com: 'UPS account holders get free UPS shipping supplies including packaging, forms and labels.'",
+        "UPS Ground requires your own boxes; the free packaging targets Next Day Air, 2nd Day Air, Worldwide Express and related express services.",
+        "The UPS Store counters hand out carrier supplies for single shipments processed there (per franchise store pages)."
+      ],
+      "url": "https://www.ups.com/us/en/shipping/order-supplies",
+      "url_label": "UPS Order Shipping Supplies",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "'UPS account holders get free UPS shipping supplies including packaging, forms and labels'", "observed": "2026-11-02", "source": "ups.com order-supplies page (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "ups-store-window",
+      "name": "The UPS Store counters (paid, varies)",
+      "category": "couriers",
+      "cost_type": "cheap",
+      "cost": "Paid - prices set per franchise; call ahead",
+      "gist": "Franchise stores sell boxes, cushioning and mailers, and they pack for you - the paying escape hatch when one weird fragile item needs solving today.",
+      "details": [
+        "Boxes from 6x6x6 up to 24x24x24, tubes, retention packaging, bubble cushioning, tape, markers, envelopes - DIY or their certified packers.",
+        "Prices differ between locations (independently owned); phoning your local store beats the website every time."
+      ],
+      "url": "https://locations.theupsstore.com/",
+      "url_label": "UPS Store locator",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Locator plus price policy: 'individually owned and operated, our prices may vary from other locations'", "observed": "2026-11-02", "source": "locations.theupsstore.com store pages via search snapshot" }
+      ]
+    },
+    {
+      "id": "dhl-oso",
+      "name": "DHL Express free packaging (international lanes)",
+      "category": "couriers",
+      "cost_type": "free-with-service",
+      "cost": "Free with a DHL Express account (flyers free under 100 single-unit orders)",
+      "gist": "International buyer paid express? DHL account holders order free flyers, envelopes, boxes and tubes through their Online Supplies Order platform.",
+      "details": [
+        "DHL OSO materials list boxes sized to 25 kg, tubes, card envelopes and poly flyers at 'No charge applied' for eligible account orders.",
+        "DHL note: DHL-branded packaging is not suitable for dangerous goods.",
+        "Rarely relevant for US-domestic e-commerce; keep it in your back pocket for cross-border heavyweights."
+      ],
+      "url": "https://oso.dhl.com/",
+      "url_label": "DHL Express Online Supplies Order",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Flyers/boxes/envelopes listed 'No charge applied'; Large Flyer free of charge for single-unit orders under 100 pieces", "observed": "2026-11-02", "source": "DHL OSO and MyDHL+ ordering pages (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "store-grocery-boxes",
+      "name": "Grocery + big-box produce/drink cases",
+      "category": "stores",
+      "cost_type": "free-call-ahead",
+      "cost": "Free - ask the stock manager",
+      "gist": "Banana boxes, egg flats and soda cases are free, sturdy, slotted, and they stack like bricks - the classic first fifty boxes for a new reseller.",
+      "details": [
+        "Best picks: banana boxes (stable footprint, vented - line one with a fresh garbage bag), egg flats (built-in dividers), drink and produce cases.",
+        "Script that works: 'Hi! I ship packages - could I take some of those empty produce boxes off your hands?' Nearly everyone says yes.",
+        "Go after restock windows (early morning), offer to take a whole stack, and become a regular - stores like fewer bales to haul.",
+        "Wipe down and sniff test: bakery and produce boxes can carry odors into collectibles. Skip anything greasy, wet, or pest-scarred."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Store-by-store practice; no official page to link. Phone first and ask for the stock manager.", "observed": "2026-11-02", "source": "no link; call ahead" }
+      ]
+    },
+    {
+      "id": "store-bike-boxes",
+      "name": "Bike shops (free cartons + foam)",
+      "category": "stores",
+      "cost_type": "free-call-ahead",
+      "cost": "Free boxes and foam inserts - call ahead",
+      "gist": "Bike boxes are the only free carton that safely ships a bicycle - and shops toss them weekly. Hit them after weekend sales rushes.",
+      "details": [
+        "Wheel-and-frame sized cartons plus hub- and spoke-foam fittings - tall fragile pieces borrow this protection beautifully.",
+        "New-stock deliveries and weekend trades leave the biggest piles; Sunday evening or Monday morning pickup works best.",
+        "Bring something to bungee them down - these boxes are long and awkward."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Store-by-store practice; no page to link. Phone first so they hold one behind the counter.", "observed": "2026-11-02", "source": "no link; call ahead" }
+      ]
+    },
+    {
+      "id": "store-furniture-stores",
+      "name": "Furniture, mattress + appliance stores",
+      "category": "stores",
+      "cost_type": "free-call-ahead",
+      "cost": "Free cardboard + foam protectors - ask at the dock",
+      "gist": "Warehouse staff slice huge clean cardboard sheets and stack foam corner blocks all day - often glad someone takes them instead of the baler.",
+      "details": [
+        "Flat cardboard boards make instant picture-frame and glass-item protectors; foam corner blocks turn any plain box into a bumper system.",
+        "Ask for the loading dock or receiving manager, not the showroom floor - and offer to take everything they have noticed stacking up.",
+        "Appliance inserts and mattress-wrap sheets arrive clean and poly-wrapped in transit."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Local dock policy; no link. Bring a bungee or tarp for the trunk.", "observed": "2026-11-02", "source": "no link; call ahead" }
+      ]
+    },
+    {
+      "id": "store-liquor-dividers",
+      "name": "Liquor/wine store box dividers",
+      "category": "stores",
+      "cost_type": "free-call-ahead",
+      "cost": "Free 12-bottle boxes with dividers - call ahead",
+      "gist": "12-slot dividers turn fragile shipments into neat modules - but mind the branding: ship these boxes inside-out or plain-paper covered.",
+      "details": [
+        "The cardboard dividers are the prize: mugs, ornaments, salt shakers, small collectible figurines all ride perfectly.",
+        "If the box is printed with an alcohol brand, flip it inside-out or cover it with plain kraft - carriers treat alcohol-marked packaging as a flag, and USPS prohibits shipping alcohol entirely.",
+        "Ask for plain, unprinted cell-divider boxes first - most stores stock both styles."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Local store policy; USPS rules prohibit shipping alcohol (branded packaging is a flag, not proof of license)", "observed": "2026-11-02", "source": "no link; USPS alcohol rules summarized in guide" }
+      ]
+    },
+    {
+      "id": "store-uhaul-exchange",
+      "name": "U-Haul 'Take a Box, Leave a Box'",
+      "category": "stores",
+      "cost_type": "free-call-ahead",
+      "cost": "Free exchange zone (where offered); new boxes from $2.04",
+      "gist": "U-Haul wants moving boxes reused: many neighborhood stores run a drop-off/take-free zone where movers swap boxes at no charge.",
+      "details": [
+        "Leave your clean moving leftovers, take someone else's castoffs - a community recycle loop run by the store itself.",
+        "Not every location runs the exchange - check your local store page or call.",
+        "Observed at uhaul.com on 2026-11-02: new moving boxes 'as low as $2.04' - a decent nearby top-up (their $4.95 tape is in Frugal alternatives)."
+      ],
+      "url": "https://www.uhaul.com/MovingSupplies/Boxes",
+      "url_label": "U-Haul moving boxes",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Moving Box 'As low as: $2.04'; Supply Kit (5 boxes, 1 tape roll, 10 label pouches) $39.99", "observed": "2026-11-02", "source": "uhaul.com/MovingSupplies/Boxes (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "store-free-groups",
+      "name": "Nextdoor free lists / FB Marketplace / Buy Nothing",
+      "category": "stores",
+      "cost_type": "free",
+      "cost": "Free (local groups + curb alerts)",
+      "gist": "Movers move out year-round, and 'free boxes' posts show up weekly - set saved alerts or someone else takes the stack in an hour.",
+      "details": [
+        "Search free sections for 'boxes', 'moving boxes', 'bubble mailers'; set saved-search alerts so you respond while the pile is still there.",
+        "Apartment complexes: May and September are box monsoons - polite curb-picking near move-out weekends is a lifestyle.",
+        "Buy Nothing groups (hosted on Facebook) are hyper-local and generous by design; say thanks with a photo afterward.",
+        "Facebook marketplace links are login-gated to automated checks; Nextdoor's free board is the friendlier link."
+      ],
+      "url": "https://nextdoor.com/",
+      "url_label": "Nextdoor",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Community free listings (platform-dependent; login gates apply)", "observed": "2026-11-02", "source": "nextdoor.com (HTTP 200); facebook.com/marketplace returns 400 to bots - login-gated" }
+      ]
+    },
+    {
+      "id": "store-office-paper",
+      "name": "Office / school copy-paper cases",
+      "category": "stores",
+      "cost_type": "free-call-ahead",
+      "cost": "Free at any office, school or print room",
+      "gist": "Copy-paper cases are rigid, square, and free for the asking - the unglamorous MVP of heavy-part resellers.",
+      "details": [
+        "Strong walls and tight lids make these ideal for tool kits, hardware, and dense collectibles that dislike flex.",
+        "Schools and offices unload them at end-of-year cleanouts; print shops and real-estate offices cycle them weekly.",
+        "Ask the receptionist or office manager; bring the empties back and they will happily refill your supply."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Local office-surplus practice; no official page", "observed": "2026-11-02", "source": "no link; call ahead" }
+      ]
+    },
+    {
+      "id": "frugal-reuse",
+      "name": "Level zero: reuse your own inbound packaging",
+      "category": "frugal",
+      "cost_type": "free",
+      "cost": "$0 plus five minutes of label surgery",
+      "gist": "Every Amazon box and padded mailer you receive is reseller gold - if you strike the labels and match the lane.",
+      "details": [
+        "Remove or fully black out old labels and barcodes - scanners can resurrect them and snarl tracking.",
+        "Service-branded inbound gets reused only for the same service (a Priority box only ships Priority again).",
+        "Plain brown boxes are open games for Ground Advantage and every ground courier.",
+        "Padded mailers usually keep their bubble intact; peeling a new outer label keeps them presentable.",
+        "Skip moldy, wet, or odd-smelling boxes - your five-star condition reputation starts at the bench."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "USPS FAQ covers reuse basics (old labels must be removed or obliterated)", "observed": "2026-11-02", "source": "faq.usps.com article (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "frugal-mailers-bulk",
+      "name": "Cheap poly + bubble mailers (bulk math)",
+      "category": "frugal",
+      "cost_type": "cheap",
+      "cost": "$0.12-$0.20 each at 100-count; ~$0.06 at 1,000-count",
+      "gist": "Mailers are the packaging you re-buy most, so the per-unit price matters: 100-count packs run $18-$20, while 1,000-count specialty cases drop to about 6 cents apiece.",
+      "details": [
+        "Observed 2026-11-02: Staples 10x13 self-sealing 100/Box $19.99 ($0.20/mailer); Walmart StarBoxes 10x13 100 ct $18.40; USPACKSMART 12x15 100-pack from $13.29 to $20.85 by variant.",
+        "1,000-count cases observed: BulkMailerHQ 10x13 $54.99/1000 ($0.055 ea); Uline S-21878 1,000-case $194 ($0.19 ea).",
+        "Dollar Tree top-up ($1.25): Polyair XPAK individual poly mailer (12.5x18 usable) and Jot 6x9 bubble mailer - convenience pricing, not bulk.",
+        "Rule of thumb: poly for clothes, bubble mailers for glassware, rigid boxes for anything heavier than a paperback."
+      ],
+      "url": "https://www.amazon.com/s?k=poly%20mailers%2010x13",
+      "url_label": "Compare live (Amazon search)",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Staples brand 10x13 poly mailer 100/Box $19.99 ($0.20/mailer)", "observed": "2026-11-02", "source": "staples.com product page in search snapshot" },
+        { "claim": "Walmart StarBoxes 10x13 100-pack $18.40", "observed": "2026-11-02", "source": "walmart.com product page viewed via search snapshot" },
+        { "claim": "BulkMailerHQ 10x13 1000-pack $54.99 ($0.055/mailer); Uline S-21878 1000-case $194", "observed": "2026-11-02", "source": "bulkmailerhq.com and uline.com pages/snapshots" }
+      ]
+    },
+    {
+      "id": "frugal-uline",
+      "name": "Uline bulk boxes (real wholesale pricing)",
+      "category": "frugal",
+      "cost_type": "cheap",
+      "cost": "$1.16/box for 12x12x12 at 25 qty - drops with volume",
+      "gist": "Uline sells at wholesale rates without a reseller license - the reliable per-box floor for serious volume, with same-day ship to boot.",
+      "details": [
+        "Observed 2026-11-02: S-4125 (12x12x12, 200# test) at $1.16/box in the 25-bundle (orders in multiples of 25); the lighter 32-ECT version runs about $1.00/box.",
+        "Volume tiers drop the unit price further as quantity grows - plan around a 250-bundle if you ship weekly.",
+        "Watch Uline's shipping-sensitive minimum culture: one 25-bundle of small boxes keeps freight near-normal.",
+        "200# test vs 32 ECT explained: burst-strength vs edge-crush ratings; per Uline/UPS notes, 200# handles heavier loads (up to ~40 lb)."
+      ],
+      "url": "https://www.uline.com/Product/Detail/S-4125/Corrugated-Boxes-200-Test/12-x-12-x-12-Corrugated-Boxes",
+      "url_label": "Uline S-4125 product page",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "S-4125 12x12x12 corrugated boxes 25/bundle at $1.16 each (multiples of 25)", "observed": "2026-11-02", "source": "uline.com product page (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "frugal-tape",
+      "name": "Packing tape: dollar stores vs bulk",
+      "category": "frugal",
+      "cost_type": "cheap",
+      "cost": "$1.25-$1.50/roll at stores; ~$1.50/roll in bulk 18-packs",
+      "gist": "Mix a dollar-store emergency roll with a bulk pack and you are set for months - tape is the quiet subscription resellers never mean to buy.",
+      "details": [
+        "Observed 2026-11-02: Dollar Tree Tool Bench clear packing tape $1.50; Jot 1.89\" x 400\" mailing tape $1.25 (a thin, short roll).",
+        "Observed 2026-11-02: U-Haul clear 55-yard shipping/packing tape $4.95; Amazon DowDew single 55-yd heavy-duty roll $4.49; Amazon JARLINK 18-roll pack $26.99 (~$1.50/roll).",
+        "Quick math: one 55-yard roll seals roughly 20-25 medium boxes; the ~$1.50/roll bulk tier is where resellers camp.",
+        "Comparison point from CBS (Aug 2026): Scotch 2-pack tape $1.25 at Dollar Tree vs $3.32 at Walmart."
+      ],
+      "url": "https://www.walmart.com/search?q=packing+tape",
+      "url_label": "Compare live (Walmart search)",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "DT Tool Bench clear packing tape $1.50; Jot mailing tape (400 in) $1.25", "observed": "2026-11-02", "source": "sameday.dollartree.com product pages (HTTP 200)" },
+        { "claim": "U-Haul clear shipping/packing tape $4.95", "observed": "2026-11-02", "source": "uhaul.com Packing-Tape page (HTTP 200)" },
+        { "claim": "Amazon JARLINK 18 rolls $26.99 (~$1.50/roll); DowDew single roll $4.49", "observed": "2026-11-02", "source": "amazon.com product pages (search snapshots)" }
+      ]
+    },
+    {
+      "id": "frugal-newsprint",
+      "name": "Newspaper printer roll ends (free void fill)",
+      "category": "frugal",
+      "cost_type": "free-call-ahead",
+      "cost": "Free - ask the print room",
+      "gist": "Giant unprinted newsprint rolls sit free in newspaper print rooms - the cleanest void fill you will ever get, by the mile.",
+      "details": [
+        "Unprinted means zero ink-transfer risk - safe next to collectibles and clothing alike.",
+        "Ask the press or production department at any local daily paper or commercial print shop - otherwise it gets baled for recycling.",
+        "One 24-inch-wide roll yields roughly 10-20 boxes worth of crumpled fill, and whatever scraps remain recycle cleanly."
+      ],
+      "url": null,
+      "url_label": null,
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Local print-shop practice; no official listing exists", "observed": "2026-11-02", "source": "no link; call ahead" }
+      ]
+    },
+    {
+      "id": "frugal-dollartree",
+      "name": "Dollar Tree mailroom aisle ($1.25-$1.50 top-ups)",
+      "category": "frugal",
+      "cost_type": "cheap",
+      "cost": "$1.25 per item (bubble mailer, cushion wrap, packing paper); tape $1.50",
+      "gist": "Fixed low prices beat big-box single-item buys when you are one roll short - but it is a convenience tier, not the bulk tier.",
+      "details": [
+        "Observed 2026-11-02 (sameday.dollartree.com in-store prices): 12-in x 6-ft cushion wrap $1.25; Jot 6x9 bubble mailer $1.25; packing paper 20x20 (20 ct) $1.25; Polyair XPAK poly mailer $1.25; clear packing tape $1.50.",
+        "A $0.20-in-bulk poly mailer beats a $1.25 individual mailer every time - use Dollar Tree for emergencies and odd sizes.",
+        "The mailroom aisle exists in-store and on same-day order pages; the QR card below points at the collection."
+      ],
+      "url": "https://sameday.dollartree.com/store/dollar-tree/collections/rc-mailroom-supplies-23489",
+      "url_label": "Dollar Tree mailroom supplies",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "Cushion wrap $1.25; packing paper $1.25; bubble mailer $1.25; poly mailer $1.25; packing tape $1.50", "observed": "2026-11-02", "source": "sameday.dollartree.com mailroom collection and product pages (HTTP 200)" }
+      ]
+    },
+    {
+      "id": "frugal-pirate-ship",
+      "name": "Pirate Ship: free postage platform (the real cost-saver)",
+      "category": "frugal",
+      "cost_type": "free",
+      "cost": "Free software; commercial USPS pricing + discounted UPS rates",
+      "gist": "No monthly fee, no per-label markup: commercial USPS pricing, discounted UPS rates, and Priority Mail Cubic priced below commercial.",
+      "details": [
+        "Pirate Ship's own pitch: 'No monthly fees, markup or hidden costs' - the platform gets paid by carriers, not by you.",
+        "Priority Mail Cubic there is priced below commercial pricing - small dense packages (books, K-cups, electronic gadgets) get radical savings.",
+        "UPS Ground Saver and UPS flat-rate-style lanes live inside the same free account.",
+        "Where the free packaging stops helping (Ground lanes), smart postage platforms like this pick you back up."
+      ],
+      "url": "https://www.pirateship.com/",
+      "url_label": "Pirateship.com",
+      "verified": "2026-11-02",
+      "price_evidence": [
+        { "claim": "'No monthly fees, markup or hidden costs'; Priority Mail Cubic below commercial pricing", "observed": "2026-11-02", "source": "pirateship.com (HTTP 200)" }
+      ]
+    }
+  ]
+}

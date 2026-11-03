@@ -1,0 +1,12 @@
+# editor/OS noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# python noise
+__pycache__/
+*.pyc
+.venv/
+
+# local server junk
+*.log
